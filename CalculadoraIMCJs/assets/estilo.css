@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+html {
+  background-color: #a7c6ed; /* Azul suave */
+  height: 100%;
+  font-family: 'Poppins', sans-serif; /* Aplicando a fonte Poppins */
+}
+
+body {
+  margin: 0;
+}
+
+.calc {
+  background-color: #fff;
+  padding: 30px;
+  margin: auto;
+  max-width: 400px; /* Ajustei para uma largura fixa */
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #1f3c72; /* Azul mais escuro */
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+h2 {
+  padding-bottom: 25px;
+  color: #1f3c72; /* Azul mais escuro */
+}
+
+label {
+  font-weight: bold;
+  color: #555;
+}
+
+input[type="number"] {
+  width: 100%; /* Ajustando para 100% */
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.btn {
+  background-color: #5a8fd4; /* Azul suave */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #4879b4; /* Azul um pouco mais escuro para hover */
+}
+
+h3 {
+  margin-top: 30px;
+  color: #333;
+}

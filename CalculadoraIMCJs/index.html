@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CALCULAR IMC</title>
+    <link rel="stylesheet" href="assets/estilo.css">
+  </head>
+  <body>
+    <header>
+      <h1>Calculadora IMC</h1>
+    </header>
+    <main>
+      <div class="calc">
+        <h2>Insira seus dados para calcular seu IMC</h2>
+        <label for="altura">Sua altura: </label>
+        <input type="number" name="altura" id="altura" required />
+        <br/>
+        <br/>
+        <label for="peso">Seu peso: </label>
+        <input type="number" name="peso" id="peso" required />
+        <br/>
+        <br/>
+        <button onclick="calcular()" class="btn">Calcular</button>
+        <br/>
+        <br/>
+        <h3>Resultado:</h3>
+        <span id="resultado"></span>
+      </div>
+    </main>
+    <script>
+      function calcular() {
+        let peso = document.getElementById("peso").value;
+        let altura = document.getElementById("altura").value;
+        let imc = peso / (altura * altura);
+        let imcArredondado = imc.toFixed(2); // Arredondando a duas casas decimais
+
+        let resultado = document.getElementById("resultado");
+        
+        if (imc <= 18.5) {
+          resultado.textContent = "Seu resultado é " + imcArredondado + ". Seu grau é: Palito 🍃.";
+        } else if (imc > 18.5 && imc <= 24.9) {
+          resultado.textContent = "Seu resultado é " + imcArredondado + ". Seu grau é: Peso Normal, Ta safe 👍.";
+        } else if (imc >= 25 && imc <= 29.9) {
+          resultado.textContent = "Seu resultado é " + imcArredondado + ". Seu grau é: Ta crescendo 😯.";
+        } else if (imc >= 30 && imc <= 34.9) {
+          resultado.textContent = "Seu resultado é " + imcArredondado + ". Seu grau é: Grande pkrl grau I 😰.";
+        } else if (imc >= 35 && imc <= 39.9) {
+          resultado.textContent = "Seu resultado é " + imcArredondado + ". Seu grau é: Grande pkrl Grau II 😱.";
+        } else {
+          resultado.textContent = "Seu resultado é " + imcArredondado + ". Seu grau é: Grande pkrl Grau III 💀.";
+        }
+      }
+    </script>
+  </body>
+</html>
